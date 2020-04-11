@@ -1,6 +1,6 @@
 from marshmallow import fields
 
-from itlhole.app import ma
+from random.app import ma
 
 
 class Random(ma.Schema):
