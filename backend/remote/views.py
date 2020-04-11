@@ -1,8 +1,6 @@
 from datetime import datetime
 
-
-from flask import Blueprint, jsonify, request, send_file
-from sqlalchemy.orm import joinedload
+from flask import Blueprint, jsonify, request
 
 from remote.app import db
 from remote.models import Random

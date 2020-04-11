@@ -1,5 +1,3 @@
-from marshmallow import fields
-
 from remote.app import ma
 
 
