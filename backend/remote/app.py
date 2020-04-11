@@ -13,10 +13,10 @@ CORS(app)
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
-from random.models import db  # noqa isort:skip
+from remote.models import db  # noqa isort:skip
 
 db.init_app(app)
 
-from random.views import api  # noqa isort:skip
+from remote.views import api  # noqa isort:skip
 
 app.register_blueprint(api)
