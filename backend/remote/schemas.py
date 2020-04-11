@@ -3,9 +3,9 @@ from marshmallow import fields
 from remote.app import ma
 
 
-class remote(ma.Schema):
+class random(ma.Schema):
     class Meta:
         fields = ("id", "time_stamb", "value")
 
 
-remote_schema = remote()
+random_schema = random()

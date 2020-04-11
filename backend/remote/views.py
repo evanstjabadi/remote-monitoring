@@ -5,39 +5,39 @@ from flask import Blueprint, jsonify, request, send_file
 from sqlalchemy.orm import joinedload
 
 from remote.app import db
-from remote.models import remote
-from remote.schemas import remote_schema
+from remote.models import random
+from remote.schemas import random_schema
 
 
 api = Blueprint("api", "api")
 
 
-@api.route("/remote/", methods=["POST"])
-def add_remote():
+@api.route("/random/", methods=["POST"])
+def add_random():
     time_stamb = request.json["time_stamb"]
     value = request.json["value"]
-    new_remote = remote(time_stamb=time_stamb, value=value)
-    db.session.add(new_remote)
+    new_random = random(time_stamb=time_stamb, value=value)
+    db.session.add(new_random)
     db.session.commit()
-    return remote_schema.jsonify(new_remote)
+    return random_schema.jsonify(new_random)
 
 
-@api.route("/remote/", methods=["GET"])
-def get_remotes():
-    remotes = remote.query.all()
-    result = remote_schema.dump(remotes, many=True)
+@api.route("/random/", methods=["GET"])
+def get_randoms():
+    randoms = random.query.all()
+    result = random_schema.dump(randoms, many=True)
     return jsonify(result)
 
 
-@api.route("/remote/<id>", methods=["GET"])
-def get_remote(id):
-    remote = remote.query.get(id)
-    return remote_schema.jsonify(remote)
+@api.route("/random/<id>", methods=["GET"])
+def get_random(id):
+    random = random.query.get(id)
+    return random_schema.jsonify(random)
 
 
-@api.route("/remote/<id>", methods=["DELETE"])
-def delete_remote(id):
-    remote = remote.query.get(id)
-    db.session.delete(remote)
+@api.route("/random/<id>", methods=["DELETE"])
+def delete_random(id):
+    random = random.query.get(id)
+    db.session.delete(random)
     db.session.commit()
-    return remote.jsonify(remote)
+    return random.jsonify(random)
