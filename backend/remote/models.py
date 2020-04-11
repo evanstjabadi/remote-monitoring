@@ -10,4 +10,8 @@ class Random(db.Model):
     value = db.Column(db.Integer)
 
     def __repr__(self):
-        return 'Random(id=%s, time_stamb=%s, value=%s)' % (self.id, self.time_stamb, self.value)
+        return "Random(id=%s, time_stamb=%s, value=%s)" % (
+            self.id,
+            self.time_stamb,
+            self.value,
+        )

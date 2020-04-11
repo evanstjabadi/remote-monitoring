@@ -14,7 +14,7 @@ api = Blueprint("api", "api")
 
 @api.route("/randoms/", methods=["POST"])
 def add_random():
-    time_stamb = datetime.strptime(request.json["time_stamb"], '%Y-%m-%d')
+    time_stamb = datetime.strptime(request.json["time_stamb"], "%Y-%m-%d")
     value = request.json["value"]
     new_random = Random(time_stamb=time_stamb, value=value)
     db.session.add(new_random)
