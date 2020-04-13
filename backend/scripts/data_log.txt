@@ -1,0 +1,24 @@
+
+Status Code: 200
+Data: {
+  "id": 45, 
+  "time_stamb": "2020-04-13T19:13:26", 
+  "value": 80
+}
+
+Status Code: 200
+Data: {
+  "id": 46, 
+  "time_stamb": "2020-04-13T19:13:32", 
+  "value": 41
+}
+
+Status Code: 200
+Data: {"id":19,"time_stamb":"2020-04-13T19:14:00","value":65}
+
+Status Code: 200
+Data: {"id":20,"time_stamb":"2020-04-13T19:14:07","value":10}
+
+Status Code: 200
+Data: {"id":21,"time_stamb":"2020-04-13T19:14:19","value":55}
+
