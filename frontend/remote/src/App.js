@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "./App.css";
-import Graphs from "./Graphs";
+import React, { Component } from 'react'
+import './App.css'
+import Graphs from './Graphs'
 
 class App extends Component {
   render() {
@@ -17,8 +17,8 @@ class App extends Component {
           <Graphs className="Graph" />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

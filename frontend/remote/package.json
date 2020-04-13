@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv-errors": "^1.0.1",
+    "npm": "^6.13.7",
     "react": "^16.13.1",
     "react-charts": "^2.0.0-beta.6",
     "react-dom": "^16.13.1",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "terser-webpack-plugin": "^2.3.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
