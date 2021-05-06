@@ -1,5 +1,5 @@
 flask==1.1.1
-flask-Cors==3.0.8
+flask-Cors==3.0.9
 flask-Marshmallow==0.10.1
 flask-SQLAlchemy==2.4.0
 marshmallow-sqlalchemy
